@@ -13,6 +13,7 @@ class GameScene: SKScene
     var ocean1 : Ocean?
     var ocean2 : Ocean?
     var player : Player?
+    var island : Island?
     
     override func sceneDidLoad()
     {
@@ -23,20 +24,21 @@ class GameScene: SKScene
         
         // add ocean1 to the scene and starts it at the Reset location
         ocean1 = Ocean()
-        ocean1?.Start()
         ocean1?.Reset()
         addChild(ocean1!)
         
         // add ocean2 to the scene and starts it lower
         ocean2 = Ocean()
-        ocean2?.Start()
         ocean2?.position.y = -627
         addChild(ocean2!)
         
         // add the player to the scene
         player = Player()
-        player?.Start()
         addChild(player!)
+        
+        // add the island to the scene
+        island = Island()
+        addChild(island!)
     }
     
     
@@ -82,5 +84,6 @@ class GameScene: SKScene
         ocean1?.Update()
         ocean2?.Update()
         player?.Update()
+        island?.Update()
     }
 }
