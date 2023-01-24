@@ -8,6 +8,9 @@ class GameViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        //print(self.view.frame.size.width)
+        //print(self.view.frame.size.height)
 
         if let scene = GKScene(fileNamed: "GameScene")
         {

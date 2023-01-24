@@ -30,7 +30,7 @@ class GameScene: SKScene
         // add ocean2 to the scene and starts it lower
         ocean2 = Ocean()
         ocean2?.Start()
-        ocean2?.position.y = -773
+        ocean2?.position.y = -627
         addChild(ocean2!)
         
         // add the player to the scene
@@ -42,18 +42,18 @@ class GameScene: SKScene
     
     func touchDown(atPoint pos : CGPoint)
     {
-        player?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        player?.TouchMove(newPos: CGPoint(x: pos.x, y: -640))
     }
     
     func touchMoved(toPoint pos : CGPoint)
     {
-        player?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        player?.TouchMove(newPos: CGPoint(x: pos.x, y: -640))
         
     }
     
     func touchUp(atPoint pos : CGPoint)
     {
-        player?.TouchMove(newPos: CGPoint(x: pos.x, y: -495))
+        player?.TouchMove(newPos: CGPoint(x: pos.x, y: -640))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
